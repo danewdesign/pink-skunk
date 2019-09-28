@@ -1,9 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgba(255, 230, 240, 0.6);
   margin: 0;
   overflow-x: hidden;
 }
 
+/********** Navbar Section **********/
 .p {
   filter: invert(100%);
   margin-left: 15px;
@@ -13,6 +18,9 @@ body {
 .navigation {
   background-color: #330014;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 70%);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .pink-links {
@@ -27,43 +35,173 @@ body {
   background-color: #ffb3d1;
 }
 
+/********** Big Top Header **********/
 #heading-container {
   background-color: #ffe6f2;
 }
 
 .logo-container {
   background: url('images/pink-wooden-panels.png');
-  box-shadow: 0 4px 8px 0 rgba(51, 0, 20, 0.9);
   display: flex;
   justify-content: center;
-  /*padding-bottom: 30px;
-  padding-top: 30px;*/
   width: 100vw;
-  z-index: 1;
 }
 
 .logo {
-  /*border: 3px transparent;
-  border-radius: 200px;
-  border-width: 20px;
-  box-shadow: 0 4px 18px 0 rgba(255, 0, 102, 0.5);*/
   color: #000;
   font-family: 'Lovers Quarrel', cursive;
   font-size: 16rem;
   padding: 60px 50px 45px;
-  text-shadow: 4px 4px rgba(255, 179, 209, 0.8); /*128 179*/
+  text-shadow: 4px 4px rgba(255, 179, 209, 0.8);
+}
+
+/********** Main Content Section - Side Bars + Center *********/
+.content-top {
+  z-index: -1;
+}
+
+/* Side Bars */
+.side-bars {
+  background: url('images/shoppers-withpink.png');
+  opacity: 0.1;
+  width: 100%;
+  z-index: -2;
+}
+
+/* Main Content Center */
+.divider {
+  border-color: #ffcce0;
+  border-top-width: 20px;
+  border-style: dotted none none none;
+  margin: 100px auto 0 auto;
+  opacity: 0.4;
+  width: 12%;
 }
 
 .main-content {
   background-color: #ffffff;
   position: relative;
-  z-index: -1;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Top Carousel */
+#carousel1 {
+  margin: 0 auto 100px auto;
+  z-index: 0;
+}
+
+.car-row-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  z-index: 1;
+}
+
+.car-butt-col {
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.carButton {
+  background: none;
+  border: none;
+  color: #ff3385;
+  font-size: 3rem;
+  padding: 0;
+  z-index: 1;
+}
+
+.carButton:hover {
+  color: #660029;
+}
+
+.pressed {
+  opacity: 0.3;
+}
+
+.images-col {
+  align-self: center;
+  text-align: center;
+}
+
+.dress-imgs {
+  height: auto;
+  /* max-width: 95%; */
+  margin: auto;
+  padding-top: 25px;
+}
+
+/* Jumbotron with Sale Ad */
+#jumbo1 {
+  align-items: center;
+  background-color: #ffb3d1;
+  color: #4d001f;
+  display: flex;
+  margin: 100px auto;
+  padding: 6rem 2rem;
+}
+
+.clipart-container {
+  float: left;
+}
+
+.sale-clipart {
+  border: solid transparent;
+  border-radius: 20px;
+  max-width: 100%;
+}
+
+/* Bottom Shopping Cart Style Carousel */
+.cities {
+  margin: 100px auto;
+}
+
+.city-slide-inside {
+  margin: auto;
+  width: 80%;
+}
+
+#dress-cards {
+  margin: 100px auto;
+  z-index: 1;
+}
+
+.c-slide2 {
+  height: 565px;
+}
+
+.c-body {
+  text-align: center;
+}
+
+.c-button {
+  margin: auto;
+
+}
+
+.img-summer {
+  margin: 25px auto 0 auto;
+  max-width: 80%;
+}
+
+/* Footer Decorative Girl and Vines */
+.girl-container {
+  position: relative;
+}
+
+.girl-div {
+  bottom: -70px;
+  height: auto;
+  left: -250px;
+  position: absolute;
 }
 
 .border-image-left {
   bottom: -35px;
-  position: absolute;
   left: -40px;
+  position: absolute;
 }
 
 .border-image-right {
@@ -72,20 +210,9 @@ body {
   right: -40px;
 }
 
-.side-bars {
-  background: url('images/shoppers-withpink.png');
-  /*filter: hue-rotate(100%);*/
-  height: 100vh;
-  opacity: 0.2;
-  width: 100%;
-  z-index: -2;
-}
-
-.girl-div {
-  left: -440px;
-  bottom: -70px;
-  height: auto;
-  position: absolute;
+/********** Footer Section **********/
+#footer {
+  z-index: 2;
 }
 
 .footer-p {
